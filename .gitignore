@@ -1,0 +1,6 @@
+*.pyc
+/todo
+/MANIFEST
+/build
+/dist
+/ppa.sh

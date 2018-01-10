@@ -1,0 +1,10 @@
+everything in python (instead of shell / mono)
+an indicator instead of an applet
+use policykit (access a daemon over dbus) instead of sudo
+kernel power settings in a config file
+added general xinput control
+added brightness control
+added power (watts) consumption
+
+removed: bluetooth, wifi, resolution, vga-output (already in ubuntu indicators)
+

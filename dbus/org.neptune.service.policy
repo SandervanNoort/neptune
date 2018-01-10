@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+ <!-- To the extent possible under law, David D. Lowe has waived all 
+ copyright and related or neighboring rights to this file.
+ License: http://creativecommons.org/publicdomain/zero/1.0/ -->
+<policyconfig>
+  <vendor>Neptune</vendor>
+  <action id="org.neptune.service.exit">
+    <description>Quit the neptune daemon</description>
+    <message>Provide password to quit the Neptune daemon</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+  <action id="org.neptune.service.control">
+    <description>Control the power settings</description>
+    <message>Provide password to control Neptune power settings</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>yes</allow_active>
+    </defaults>
+  </action>
+</policyconfig> 

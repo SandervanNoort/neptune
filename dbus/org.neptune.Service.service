@@ -1,0 +1,4 @@
+[D-BUS Service]
+Name=org.neptune.Service
+Exec=neptune-server
+User=root

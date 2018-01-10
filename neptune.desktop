@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Neptune indicator
+Comment=Change power consumption, brightness and input devices
+Exec=indicator-neptune
+Icon=neptune
+Terminal=false
+Categories=GNOME;Utility;

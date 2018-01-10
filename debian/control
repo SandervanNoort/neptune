@@ -1,0 +1,13 @@
+Source: neptune
+Section: utils
+Priority: optional
+Maintainer: Sander van Noort <Sander.van.Noort@gmail.com>
+Build-Depends: debhelper (>= 7), python3
+Standards-Version: 3.9.5
+X-Python3-Version: >= 3.2
+
+Package: neptune
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, policykit-1, x11-xserver-utils, xinput, gir1.2-gtk-3.0, python3-configobj, gir1.2-appindicator3-0.1
+Description: Indicator for power functions
+ Indicator to control brightness, turning of the screen, and power manager

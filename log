@@ -1,0 +1,46 @@
+Creating distutils source package...
+Cleaning up directory...
+Creating deb package...
+dpkg-buildpackage: source package neptune
+dpkg-buildpackage: source version 0.2-ppa5
+dpkg-buildpackage: source changed by Sander van Noort <Sander.van.Noort@gmail.com>
+ dpkg-source --before-build neptune-0.2
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean --with python2
+   dh_testdir
+   dh_auto_clean
+pyversions: missing X(S)-Python-Version in control file, fall back to debian/pyversions
+pyversions: missing debian/pyversions file, fall back to supported versions
+	python setup.py clean -a
+running clean
+'build/lib.linux-x86_64-2.7' does not exist -- can't clean it
+'build/bdist.linux-x86_64' does not exist -- can't clean it
+'build/scripts-2.7' does not exist -- can't clean it
+	find . -name \*.pyc -exec rm {} \;
+   dh_clean
+	rm -f debian/neptune.substvars
+	rm -f debian/neptune.*.debhelper
+	rm -rf debian/neptune/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} \; \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} \; \) \)
+	rm -f *-stamp
+ dpkg-source -b neptune-0.2
+dpkg-source: info: using source format `3.0 (quilt)'
+dpkg-source: info: building neptune using existing ./neptune_0.2.orig.tar.gz
+dpkg-source: warning: executable mode 0775 of 'bin/neptune' will not be represented in diff
+dpkg-source: info: local changes detected, the modified files are:
+ neptune-0.2/bin/neptune
+dpkg-source: error: aborting due to unexpected upstream changes, see /tmp/neptune_0.2-ppa5.diff.9Ww028
+dpkg-source: info: you can integrate the local changes with dpkg-source --commit
+dpkg-buildpackage: error: dpkg-source -b neptune-0.2 gave error exit status 2
+
+Command 'dpkg-buildpackage' returned non-zero exit status 2
+Failed building deb package
